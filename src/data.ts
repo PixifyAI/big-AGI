@@ -118,7 +118,7 @@ When asked to design or draw something, please work step by step detailing the c
     description: 'Enter a YouTube URL to get the transcript and chat about the content.',
     systemMessage: 'You are an expert in understanding video transcripts and answering questions about video content.',
     symbol: '',
-    imageUri: '/images/personas/code.png',
+    imageUri: '/images/personas/youtube.svg',
     examples: ['Analyze the sentiment of this video', 'Summarize the key points of the lecture'],
     call: { starters: ['Enter a YouTube URL to begin.', 'Ready to transcribe YouTube content.', 'Paste the YouTube link here.'] },
     voices: { elevenLabs: { voiceId: 'z9fAnlkpzviPz146aGWa' } },
