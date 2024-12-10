@@ -55,8 +55,8 @@
   --color-done-emphasis: #8957e5;
 }
 
-[data-joy-color-scheme="light"] .markdown-body {
-  color-scheme: light;
+[data-joy-color-scheme="dark"] .markdown-body {
+  color-scheme: dark;
   --color-prettylights-syntax-comment: #57606a;
   --color-prettylights-syntax-constant: #0550ae;
   --color-prettylights-syntax-entity: #6639ba;
