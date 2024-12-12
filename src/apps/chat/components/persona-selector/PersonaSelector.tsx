@@ -318,7 +318,7 @@ export function PersonaSelector(props: {
         {(editMode || !hidePersonaCreator) && (
           <Tile
             text='Persona Creator'
-            symbol='🎭'
+            symbol='/images/personas/persona.jpg'
             isActive={false}
             isEditMode={editMode}
             isHidden={hidePersonaCreator}
