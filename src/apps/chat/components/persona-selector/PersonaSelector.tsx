@@ -295,41 +295,41 @@ export function PersonaSelector(props: {
           </Tooltip>
         </Box>
 
-        {/* Personas Tiles */}
-        {visiblePurposeIDs.map((spId: SystemPurposeId) => {
-          const isActive = systemPurposeId === spId;
-          const systemPurpose = SystemPurposes[spId];
-          return (
-            <Tile
-              key={'tile-' + spId}
-              text={systemPurpose?.title}
-              imageUrl={systemPurpose?.imageUri}
-              symbol={systemPurpose?.symbol}
-              isActive={isActive}
-              isEditMode={editMode}
-              isHidden={hiddenPurposeIDs.includes(spId)}
-              isHighlighted={systemPurpose?.highlighted}
-              onClick={() => editMode ? toggleHiddenPurposeId(spId) : handlePurposeChanged(spId)}
-            />
-          );
-        })}
+{/* Personas Tiles */}
+{visiblePurposeIDs.map((spId: SystemPurposeId) => {
+  const isActive = systemPurposeId === spId;
+  const systemPurpose = SystemPurposes[spId];
+  return (
+    <Tile
+      key={'tile-' + spId}
+      text={systemPurpose?.title}
+      imageUrl={systemPurpose?.imageUri}
+      symbol={systemPurpose?.symbol}
+      isActive={isActive}
+      isEditMode={editMode}
+      isHidden={hiddenPurposeIDs.includes(spId)}
+      isHighlighted={systemPurpose?.highlighted}
+      onClick={() => editMode ? toggleHiddenPurposeId(spId) : handlePurposeChanged(spId)}
+    />
+  );
+})}
 
 {/* Persona Creator Tile */}
-        {(editMode || !hidePersonaCreator) && (
-          <Tile
-            text='Persona Creator'
-            imageSrc='/images/personas/persona.jpg' // Replace with your image path
-            isActive={false}
-            isEditMode={editMode}
-            isHidden={hidePersonaCreator}
-            onClick={() => editMode ? toggleHiddenPurposeId(PURPOSE_ID_PERSONA_CREATOR) : void navigateToPersonas()}
-            sx={{
-              fontSize: 'xs',
-              boxShadow: 'xs',
-              backgroundColor: 'neutral.softDisabledBg',
-            }}
-          />
-        )}
+{(editMode || !hidePersonaCreator) && (
+  <Tile
+    text='Persona Creator'
+    imageUrl='/images/personas/persona.jpg' // Use imageUrl prop here
+    isActive={false}
+    isEditMode={editMode}
+    isHidden={hidePersonaCreator}
+    onClick={() => editMode ? toggleHiddenPurposeId(PURPOSE_ID_PERSONA_CREATOR) : void navigateToPersonas()}
+    sx={{
+      fontSize: 'xs',
+      boxShadow: 'xs',
+      backgroundColor: 'neutral.softDisabledBg',
+    }}
+  />
+)}
 
 
         {/* [row -3] Description */}
