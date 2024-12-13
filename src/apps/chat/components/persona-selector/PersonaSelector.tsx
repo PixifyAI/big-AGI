@@ -314,11 +314,11 @@ export function PersonaSelector(props: {
           );
         })}
 
-        {/* Persona Creator Tile */}
+{/* Persona Creator Tile */}
         {(editMode || !hidePersonaCreator) && (
           <Tile
             text='Persona Creator'
-            symbol='kk'
+            imageSrc='/images/personas/persona.jpg' // Replace with your image path
             isActive={false}
             isEditMode={editMode}
             isHidden={hidePersonaCreator}
